@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: 0.07em;
+}
+.main {
+  margin: 20px auto;
+  width: 95%; 
+  min-height: 1000px;
+}
+.header .logout-btn {
+  float: right;
+}
+.header .logout-btn::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ .main-heading {
+  color: #4A47A3;
+  text-align: center;
+  font-size: 25px;
+  font-weight: lighter;
+  text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.add-form .sub-heading, .customer-list .sub-heading{
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #A7C5EB;
+  font-size: 16px;
+  border-radius: 5px;
+}
+/*STYLING FORM*/
+.login-container .login-form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.login-form .field {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+.login-err {
+  color: red;
+  font-size: 15px;
+  margin: 1px 0 5px 0
+}
+.add-form form  {
+  margin: 0 0 55px 0;
+}
+.add-form form .field{
+  margin: 0 5px 25px 5px;
+  width: 95%;
+}
+.add-form form .button, .login-form .button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.add-form form .field button {
+  min-width: 90px;
+  max-width: 90px;
+}
+.customer-list .user-action{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customer-list .search-field {
+  margin: 25px 0 10px 0;
+  max-width: 50%;
+}
+.customer-list .print-btn {
+  color: #4A47A3;
+  cursor: pointer;
+}
+.table-container .table .th .th-tr{
+  border-bottom: 2px solid gray;
+}
+.table-container .table .th .th-tr .th-td {
+  font-weight: bold;
+}
+.table-container .table .th .th-td{
+  font-size: 15px;
+}
+.table-container .table .tb .tb-tr:nth-child(2){
+  border-radius: 3px;
+  background-color: rgb(224, 224, 224);
+}
+.table-container .table .tb .tb-td{
+  font-size: 14px;
+}
+.table-container .table .tb .delete-cell{
+  color: rgb(228, 85, 85);
+  padding: 4px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+ .main {
+  max-width: 60%;
+ }
+ .login-container .login-form {
+  width: 40%;
+}
+.login-form .field {
+  margin: 0 0px 25px 0px;
+}
+ .main-heading {
+  font-size: 27px;
+ }
+ .add-form .sub-heading, .customer-list .sub-heading{
+  font-size: 17px;
+ }
+.table-container .table .th .th-td{
+  font-size: 17px;
+ }
+ .table-container .table .tb .tb-td{
+  font-size: 16px;
+ }
+}
+@media print {
+  .page-break {
+    display: none;
+  }
+  html, body {
+    height: initial !important;
+    overflow: initial !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .table-container .table .tb .delete-cell {
+    display: none;
+  }
+  .table-container .table .th .th-td{
+  font-size: 20px;
+ }
+ .table-container .table .tb .tb-td{
+  font-size: 18px;
+ }
+ .table-container {
+   overflow: hidden;
+ }
+}

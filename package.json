@@ -1,0 +1,35 @@
+{
+  "name": "tkm-sons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
+    "dotenv": "^10.0.0",
+    "firebase": "^8.8.0",
+    "git": "^0.1.5",
+    "node-process-windows": "^0.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-to-print": "^2.12.6",
+    "secrets": "^1.1.5",
+    "vite": "^2.4.3",
+    "webpack": "^5.46.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohideentgm/tkm-sons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohideentgm/tkm-sons/issues"
+  },
+  "homepage": "https://github.com/mohideentgm/tkm-sons#readme"
+}
