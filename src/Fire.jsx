@@ -1,7 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/auth'
 import 'firebase/firestore'
-
+require('dotenv').config()
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: import.meta.env.VITE_AUTHDOMAINE,
