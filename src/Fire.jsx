@@ -5,7 +5,7 @@ import DotEnv from 'dotenv'
 
 DotEnv.config()
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
+  apiKey: import.meta.env.VITE_NEW_API,
   authDomain: import.meta.env.VITE_AUTHDOMAINE,
   projectId: import.meta.env.VITE_PROJECTID,
   storageBucket: import.meta.env.VITE_STORAGEBUCKET,
