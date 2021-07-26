@@ -20,7 +20,6 @@ function AddList() {
         customerdocumentnumber: customerDocumentNumber,
         customeraddress: customerAddress[0].toUpperCase() + customerAddress.substring(1)
       }).then(() => {
-        console.log(customerName.substring(1))
          setCustomerName("")
          setCustomerFatherName("")
          setCustomerDocumentNumber("")
