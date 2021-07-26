@@ -67,6 +67,9 @@ function AddList() {
             <Input
               type="text"
               id="document-number"
+              inputProps={{
+                maxLength: 12
+              }}
               onChange={(e) => { setCustomerDocumentNumber(e.target.value) }}
               value={customerDocumentNumber}
               required
