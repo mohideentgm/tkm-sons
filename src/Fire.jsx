@@ -2,16 +2,18 @@ import Firebase from 'firebase/app';
 import 'firebase/auth'
 import 'firebase/firestore'
 
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+ dotenv.config()
 
 const firebaseConfig = {
-  apiKey: import.meta.env.API_KEY,
-  authDomain: import.meta.env.AUTHDOMAINE,
-  projectId: import.meta.env.PROJECTID,
-  storageBucket: import.meta.env.STORAGEBUCKET,
-  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
-  appId: import.meta.env.APPID,
-  measurementId: import.meta.env.MEASUREMENTID
+  apiKey: core.getInput('API_KEY'),
+  authDomain: core.getInput('AUTHDOMAINE'),
+  projectId: core.getInput('PROJECTID'),
+  storageBucket: core.getInput('STORAGEBUCKET'),
+  messagingSenderId: core.getInput('MESSAGINGSENDERID'),
+  appId: core.getInput('API_APPIDKEY'),
+  measurementId: core.getInput('MEASUREMENTID')
 };
 
 Firebase.initializeApp(firebaseConfig);
