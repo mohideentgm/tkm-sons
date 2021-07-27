@@ -4,7 +4,7 @@ import 'firebase/firestore'
 import secrets from 'secrets'
 
 const firebaseConfig = {
-  apiKey: secrets.VITE_API_KEY,
+  apiKey: 'AIzaSyBphz0GEdoOMm-jRXACOHkz16M5gkMjM4Y',
   authDomain: secrets.VITE_AUTHDOMAINE,
   projectId: secrets.VITE_PROJECTID,
   storageBucket: secrets.VITE_STORAGEBUCKET,

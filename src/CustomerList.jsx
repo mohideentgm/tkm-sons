@@ -55,7 +55,6 @@ const CustomerList = () => {
               ) {
                 return item;
               }
-              return null;
             }).sort((a,b) => {
                 if(a.customeraddress.toLowerCase() < b.customeraddress.toLowerCase()) return -1;
                 if(a.customeraddress.toLowerCase() > b.customeraddress.toLowerCase()) return 1;
