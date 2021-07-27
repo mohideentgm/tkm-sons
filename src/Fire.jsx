@@ -1,6 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/auth'
 import 'firebase/firestore'
+import secrets from 'secrets'
 
 const firebaseConfig = {
   apiKey: secrets.VITE_API_KEY,
