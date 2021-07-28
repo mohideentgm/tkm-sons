@@ -3,7 +3,7 @@ import CustomerList from './CustomerList'
 import { Db, auth } from './Fire'
 import { FormControl, Input, InputLabel, Button } from '@material-ui/core';
 
-function AddList() 
+function AddList() {
   const [customerName, setCustomerName] = useState("")
   const [customerFatherName, setCustomerFatherName] = useState("")
   const [customerDocumentNumber, setCustomerDocumentNumber] = useState("")
