@@ -7,13 +7,13 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTHDOMAINE,
-  projectId: process.env.PROJECTID,
-  storageBucket: process.env.STORAGEBUCKET,
-  messagingSenderId: process.env.MESSAGINGSENDERID,
-  appId: process.env.API_APPIDKEY,
-  measurementId: process.env.MEASUREMENTID
+  apiKey: import.meta.env.API_KEY,
+  authDomain: import.meta.env.AUTHDOMAINE,
+  projectId: import.meta.env.PROJECTID,
+  storageBucket: import.meta.env.STORAGEBUCKET,
+  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
+  appId: import.meta.env.API_APPIDKEY,
+  measurementId: import.meta.env.MEASUREMENTID
 };
 
 Firebase.initializeApp(firebaseConfig);
