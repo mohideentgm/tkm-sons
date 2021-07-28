@@ -7,7 +7,7 @@ import 'firebase/firestore'
 // dotenv.config()
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBphz0GEdoOMm-jRXACOHkz16M5gkMjM4Y",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: process.env.VITE_AUTHDOMAINE,
   projectId: process.env.VITE_PROJECTID,
   storageBucket: process.env.VITE_STORAGEBUCKET,
