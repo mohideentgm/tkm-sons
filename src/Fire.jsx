@@ -7,13 +7,13 @@ import 'firebase/firestore'
 // dotenv.config()
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTHDOMAINE,
-  projectId: import.meta.env.VITE_PROJECTID,
-  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
-  appId: import.meta.env.VITE_API_APPIDKEY,
-  measurementId: import.meta.env.VITE_MEASUREMENTID
+  apiKey: "AIzaSyBphz0GEdoOMm-jRXACOHkz16M5gkMjM4Y",
+  authDomain: "tkm-sons.firebaseapp.com",
+  projectId: "tkm-sons",
+  storageBucket: "tkm-sons.appspot.com",
+  messagingSenderId: "707740237820",
+  appId: "1:707740237820:web:7dd6d56d0a2cb91909bc79",
+  measurementId: "G-L1DPJYB4JS"
 };
 
 Firebase.initializeApp(firebaseConfig);
