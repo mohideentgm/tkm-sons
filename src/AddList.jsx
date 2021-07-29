@@ -68,6 +68,7 @@ function AddList() {
               type="text"
               id="document-number"
               inputProps={{
+                minLength: 12
                 maxLength: 12
               }}
               onChange={(e) => { setCustomerDocumentNumber(e.target.value) }}
