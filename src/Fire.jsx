@@ -7,13 +7,13 @@ import 'firebase/firestore'
 // dotenv.config()
 
 const firebaseConfig = {
-  apiKey: imort.meta.env.VITE_API_KEY,
-  authDomain: imort.meta.env.VITE_AUTHDOMAINE,
-  projectId: imort.meta.env.VITE_PROJECTID,
-  storageBucket: imort.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId: imort.meta.env.VITE_MESSAGINGSENDERID,
-  appId: imort.meta.env.VITE_API_APPIDKEY,
-  measurementId: imort.meta.env.VITE_MEASUREMENTID
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAINE,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_API_APPIDKEY,
+  measurementId: import.meta.env.VITE_MEASUREMENTID
 };
 
 Firebase.initializeApp(firebaseConfig);
