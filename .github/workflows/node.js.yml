@@ -22,3 +22,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install
       run: npm install
+
+      env: 
+        CI: true
+        API_KEY: VITE_API_KEY
