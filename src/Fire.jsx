@@ -2,9 +2,9 @@ import Firebase from 'firebase/app';
 import 'firebase/auth'
 import 'firebase/firestore'
 // import core from '@actions/core'
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 
-// dotenv.config()
+dotenv.config()
 
 const firebaseConfig = {
   apiKey: process.env.WHO_TO_TRUST,
