@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 const firebaseConfig = {
-  apiKey: process.env.WHO_TO_TRUST,
+  apiKey: process.env.VITE_API_KEY,
   authDomain: process.env.VITE_AUTHDOMAINE,
   projectId: process.env.VITE_PROJECTID,
   storageBucket: process.env.VITE_STORAGEBUCKET,
