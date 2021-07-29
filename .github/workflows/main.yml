@@ -28,6 +28,6 @@ jobs:
       - name: Step 3 - Conditional GitHub Action (false)
         shell: bash
         env: 
-          WHO_TO_TRUST: ${{ secrets.VITE_API_KEY }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
         if:  env.VITE_API_KEY != 'TrustNobody'
         run: echo "I was wrong thinking the GitHub secret was 'TrustNobody'!"
