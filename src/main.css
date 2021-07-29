@@ -88,7 +88,6 @@
   font-size: 15px;
 }
 .table-container .table .tb .tb-tr:nth-child(even){
-  border-radius: 3px;
   background-color: rgb(224, 224, 224);
 }
 .table-container .table .tb .tb-td{
