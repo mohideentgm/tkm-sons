@@ -60,6 +60,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  flex-direction: row;
 }
 .add-form form .field button {
   min-width: 90px;
