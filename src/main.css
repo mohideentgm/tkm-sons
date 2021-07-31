@@ -134,7 +134,7 @@
     overflow: initial !important;
     -webkit-print-color-adjust: exact;
   }
-  .table-container .table .tb .delete-cell {
+  .table-container .table .tb .delete-cell, .table-container .table .tb .edit-cell {
     display: none;
   }
   .table-container .table .th .th-td{
