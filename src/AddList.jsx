@@ -28,11 +28,14 @@ function AddList() {
   };
   // EDIT CELL 
   const editCell = (data) => {
-    setCustomerName(data.customername)
-    setCustomerFatherName(data.customerfathername)
-    setCustomerDocumentNumber(data.customerdocumentnumber)
-    setCustomerAddress(data.customeraddress)
-    window.scrollTo(0, 0)
+    const confirmation = confirm("Are you sure you want to edit this record")
+    if(confirmation) {
+      setCustomerName(data.customername)
+      setCustomerFatherName(data.customerfathername)
+      setCustomerDocumentNumber(data.customerdocumentnumber)
+      setCustomerAddress(data.customeraddress)
+      window.scrollTo(0, 0)
+    }
   }
   // DISPLAY
   return (
