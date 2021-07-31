@@ -96,7 +96,7 @@ function AddList() {
             />
           </FormControl>
           <FormControl className="field button">
-//             <Button type="submit" variant="contained" color="primary">Reset</Button>
+            <span className="reset-btn">Reset</span>
             <Button type="submit" variant="contained" color="primary">Submit</Button>
           </FormControl>
         </form>
