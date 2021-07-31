@@ -62,6 +62,10 @@
   align-items: center;
   flex-direction: row;
 }
+.add-form form .button .reset-btn {
+  color: red;
+  margin-right: 10px;
+}
 .add-form form .field button {
   min-width: 90px;
   max-width: 90px;
