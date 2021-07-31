@@ -26,6 +26,13 @@ function AddList() {
          setCustomerAddress("")
       })
   };
+  // RESET FORM 
+  const resetForm = () => {
+    setCustomerName("")
+    setCustomerFatherName("")
+    setCustomerDocumentNumber("")
+    setCustomerAddress("")
+  }
   // EDIT CELL 
   const editCell = (data) => {
     const confirmation = confirm("Are you sure you want to edit this record")
@@ -96,7 +103,7 @@ function AddList() {
             />
           </FormControl>
           <FormControl className="field button">
-            <span className="reset-btn">Reset</span>
+            <span onClick={() => {resetForm()}} className="reset-btn">Reset</span>
             <Button type="submit" variant="contained" color="primary">Submit</Button>
           </FormControl>
         </form>
