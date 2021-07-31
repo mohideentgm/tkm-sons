@@ -5,8 +5,9 @@ import { TextField } from '@material-ui/core'
 import { Table, TableContainer, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete';
 import PrintIcon from '@material-ui/icons/Print';
+import EditIcon from '@material-ui/icons/Edit';
 
-const CustomerList = () => {
+const CustomerList = ({editCell}) => {
   const [customers, setCustomers] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
 
@@ -18,7 +19,7 @@ const CustomerList = () => {
       setCustomers(snapshot.docs.map((doc) => doc.data()))
     );
   }, [])
-
+  
   // DELETE CUSTOMERS
   const deleteCell = (id) => {
     const confirmation = confirm("Are you sure you want to delete this record")
@@ -67,6 +68,7 @@ const CustomerList = () => {
                   <TableCell className="tb-td">{item.customerfathername}</TableCell>
                   <TableCell className="tb-td">{item.customerdocumentnumber}</TableCell>
                   <TableCell className="tb-td">{item.customeraddress}</TableCell>
+                  <TableCell onClick={() => { editCell(item) }} className="edit-cell"><EditIcon /></TableCell>
                   <TableCell onClick={() => { deleteCell(item.customerdocumentnumber) }} className="delete-cell"><DeleteIcon /></TableCell>
                 </TableRow>
               );
