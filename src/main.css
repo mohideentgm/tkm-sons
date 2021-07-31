@@ -65,6 +65,7 @@
 .add-form form .button .reset-btn {
   color: red;
   margin-right: 10px;
+  cursor: pointer;
 }
 .add-form form .field button {
   min-width: 90px;
