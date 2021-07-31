@@ -32,6 +32,7 @@ function AddList() {
     setCustomerFatherName(data.customerfathername)
     setCustomerDocumentNumber(data.customerdocumentnumber)
     setCustomerAddress(data.customeraddress)
+    window.scrollTo(0, 0)
   }
   // DISPLAY
   return (
