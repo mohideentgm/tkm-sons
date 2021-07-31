@@ -26,7 +26,13 @@ function AddList() {
          setCustomerAddress("")
       })
   };
-
+  // EDIT CELL 
+  const editCell = (data) => {
+    setCustomerName(data.customername)
+    setCustomerFatherName(data.customerfathername)
+    setCustomerDocumentNumber(data.customerdocumentnumber)
+    setCustomerAddress(data.customeraddress)
+  }
   // DISPLAY
   return (
     <div>
@@ -92,7 +98,7 @@ function AddList() {
       </div>
       <div className="customer-list">
         <h4 className="sub-heading">Customers List</h4>
-        <CustomerList />
+        <CustomerList editCell={editCell}/>
       </div>
     </div>
   )
