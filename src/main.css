@@ -59,7 +59,7 @@
 .add-form form .button, .login-form .button {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row;
 }
 .add-form form .field button {
