@@ -52,7 +52,7 @@ const CustomerList = ({editCell}) => {
                 item.customername
                   .toLowerCase()
                   .includes(searchTerm.toLowerCase()) || item.customerdocumentnumber.includes(searchTerm) ||
-                item.customeraddress.includes(searchTerm)
+                item.customeraddress.toLowerCase.includes(searchTerm.toLowerCase)
               ) {
                 return item;
               }
