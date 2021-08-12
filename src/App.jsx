@@ -10,7 +10,15 @@ function App() {
   const [password, setPassword] = useState("")
   const [emailError, setEmailError] = useState("")
   const [passwordError, setPasswordError] = useState("")
-
+  const [customers, setCustomers] = useState([])
+  
+  // GET CUSTOMER DETAILS
+  useEffect(() => {
+    Db.collection("Customers").onSnapshot((snapshot) =>
+      setCustomers(snapshot.docs.map((doc) => doc.data()))
+    );
+  }, [])
+  
   const handleLogin = (e) => {
     e.preventDefault()
     auth.signInWithEmailAndPassword(email, password)
@@ -54,7 +62,7 @@ function App() {
     <main className="main">
       <>
         {user ?
-          <AddList /> :
+          <AddList customers={customers} /> :
           <Login
             email={email}
             setEmail={setEmail}
