@@ -72,8 +72,7 @@ const CustomerList = ({editCell, customers}) => {
   }
   //  DISPLAY
   return (
-    useMemo(() => {
-      <div className="customer-list">
+     <div className="customer-list">
        <div className="user-action">
         <div className="search-field">
           <TextField
@@ -90,11 +89,9 @@ const CustomerList = ({editCell, customers}) => {
           }}
           content= {() => componentRef.current}
         />
-        </div>
-        <div >{RenderHelper()}</div>
-    </div>
-    }, [customers])
-    
+       </div>
+       <div >{RenderHelper()}</div>
+    </div> 
   )
 }
 
