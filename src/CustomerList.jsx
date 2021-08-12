@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import {Db} from './Fire'
 import ReactToPrint from 'react-to-print'
 import { TextField } from '@material-ui/core'
@@ -7,18 +7,11 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import PrintIcon from '@material-ui/icons/Print';
 import EditIcon from '@material-ui/icons/Edit';
 
-const CustomerList = ({editCell}) => {
-  const [customers, setCustomers] = useState([])
+const CustomerList = ({editCell, customers}) => {
+  
   const [searchTerm, setSearchTerm] = useState("")
 
   const componentRef = useRef(); 
-
-  // GET CUSTOMER DETAILS
-  useEffect(() => {
-    Db.collection("Customers").onSnapshot((snapshot) =>
-      setCustomers(snapshot.docs.map((doc) => doc.data()))
-    );
-  }, [])
   
   // DELETE CUSTOMERS
   const deleteCell = (id) => {
