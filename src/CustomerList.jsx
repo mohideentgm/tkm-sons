@@ -90,7 +90,7 @@ const CustomerList = ({editCell, customers}) => {
           content= {() => componentRef.current}
         />
        </div>
-       useMemo(() => {<div >{RenderHelper()}</div>}, [customers])
+       {useMemo(() => {<div >{RenderHelper()}</div>}, [customers])}
     </div> 
   )
 }
