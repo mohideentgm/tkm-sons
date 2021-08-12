@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react'
-import {Db} from './Fire'
 import ReactToPrint from 'react-to-print'
 import { TextField } from '@material-ui/core'
 import { Table, TableContainer, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core'
