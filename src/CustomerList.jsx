@@ -73,26 +73,29 @@ const CustomerList = ({editCell, customers}) => {
   }
   //  DISPLAY
   return (
-    <div className="customer-list">
-     <div className="user-action">
-      <div className="search-field">
-        <TextField
-          onChange={(e) => { setSearchTerm(e.target.value) }}
-          value={searchTerm}
-          size="small"
-          label="Search..."
-          variant="outlined"
+    useMemo(() => {
+      <div className="customer-list">
+       <div className="user-action">
+        <div className="search-field">
+          <TextField
+            onChange={(e) => { setSearchTerm(e.target.value) }}
+            value={searchTerm}
+            size="small"
+            label="Search..."
+            variant="outlined"
+          />
+        </div>
+        <ReactToPrint 
+          trigger= {() => {
+            return  <PrintIcon className="print-btn"/>
+          }}
+          content= {() => componentRef.current}
         />
-      </div>
-      <ReactToPrint 
-        trigger= {() => {
-          return  <PrintIcon className="print-btn"/>
-        }}
-        content= {() => componentRef.current}
-      />
-      </div>
-      <div >{RenderHelper()}</div>
+        </div>
+        <div >{RenderHelper()}</div>
     </div>
+    }, [customers])
+    
   )
 }
 
