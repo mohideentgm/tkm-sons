@@ -11,7 +11,8 @@ const dotenv = require('dotenv')
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: {
-      app: './src/index.jsx'
+      app: './src/index.jsx',
+      vendor: 'react'
   },
   output: {
       path: path.resolve(__dirname, 'dist/'),
@@ -45,7 +46,7 @@ module.exports = {
               use: [
                   'style-loader', 
                   'css-loader', 
-                  "postcss-loader"
+                  'postcss-loader'
                 ],
           },
           {

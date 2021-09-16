@@ -67,6 +67,7 @@ function AddList({customers}) {
               }
               value={customerName}
               required
+              autoFocus
             />
           </FormControl>
           <FormControl className="field">

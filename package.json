@@ -29,11 +29,13 @@
     "css-loader": "^6.2.0",
     "fileloader": "^2.0.0",
     "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "react-hot-loader": "^4.13.0",
+    "react-refresh": "^0.10.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.5",
@@ -44,7 +46,8 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "prod": "yarn build && serve build"
   },
   "repository": {
     "type": "git",
