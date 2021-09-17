@@ -1,0 +1,12 @@
+{
+    "presets": [
+      ["@babel/preset-env", { "modules": false }], // with this you don't have to specify if you
+      // writing ES-v Babel will automatically detect and transpile accordingly.
+      "@babel/preset-react" // Tells Babael we will be using React
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import", // Be able to use dynamic imports
+      "@babel/plugin-proposal-class-properties", // Use class properties
+      "react-hot-loader/babel"
+    ]
+  }
