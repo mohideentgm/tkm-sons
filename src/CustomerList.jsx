@@ -10,8 +10,16 @@ import EditIcon from '@material-ui/icons/Edit';
 const CustomerList = ({editCell, customers}) => {
   
   const [searchTerm, setSearchTerm] = useState("")
+  const [filter, setFilter] = useState("")
 
   const componentRef = useRef(); 
+
+  useEffect(() => {
+    const timeOutId = setTimeout(() => {
+      setFilter(searchTerm)
+    }, [1000])
+    return () => clearTimeout(timeOutId)
+  }, [searchTerm])
   
   // DELETE CUSTOMERS
   const deleteCell = (id) => {
@@ -25,7 +33,7 @@ const CustomerList = ({editCell, customers}) => {
     }
   }
   // CREATE TABLE
-  const RenderHelper = () => {
+  const RenderHelper = useMemo(() => {
     return (
       <TableContainer ref={componentRef} className="table-container">
         <Table className="table">
@@ -70,7 +78,7 @@ const CustomerList = ({editCell, customers}) => {
         </Table>
       </TableContainer>
     )
-  }
+  }, [customers, filter])
   //  DISPLAY
   return (
      <div className="customer-list">
@@ -91,7 +99,7 @@ const CustomerList = ({editCell, customers}) => {
           content= {() => componentRef.current}
         />
        </div>
-       <div>{RenderHelper()}</div>
+       <div>{RenderHelper}</div>
     </div> 
   )
 }

@@ -6,7 +6,7 @@ const dotenv = require('dotenv')
 
 module.exports = {
   entry: {
-      app: './src/index.jsx',
+      app: './src/index.tsx',
       vendor: 'react'
   },
   output: {
@@ -29,7 +29,8 @@ module.exports = {
       },
   },
   optimization: {
-    splitChunks: { chunks: "all" }
+    splitChunks: { chunks: "all" },
+    runtimeChunk: 'single'
   },
   plugins: [
       new HtmlWebpackPlugin({
