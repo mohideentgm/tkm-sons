@@ -69,8 +69,18 @@ const CustomerList = ({editCell, customers}) => {
                   <TableCell className="tb-td">{item.customerfathername}</TableCell>
                   <TableCell className="tb-td">{item.customerdocumentnumber}</TableCell>
                   <TableCell className="tb-td">{item.customeraddress}</TableCell>
-                  <TableCell onClick={() => { editCell(item) }} className="edit-cell"><EditIcon /></TableCell>
-                  <TableCell onClick={() => { deleteCell(item.customerdocumentnumber) }} className="delete-cell"><DeleteIcon /></TableCell>
+                  <TableCell className="icon-container tb-td">
+                    <EditIcon 
+                      onClick={() => { editCell(item) }}
+                      className="edit-cell"
+                    />
+                  </TableCell>
+                  <TableCell className="icon-container tb-td">
+                    <DeleteIcon 
+                      onClick={() => { deleteCell(item.customerdocumentnumber) }}
+                      className="delete-cell"
+                    />
+                  </TableCell>
                 </TableRow>
               );
             })}
