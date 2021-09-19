@@ -95,18 +95,30 @@
 }
 .table-container .table .tb .tb-tr:nth-child(even){
   border-radius: 5px;
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
 }
 .table-container .table .tb .tb-td{
+  border: none;
   font-size: 14px;
 }
-.table-container .table .tb .delete-cell{
-  color: rgb(228, 85, 85);
+.table-container .table .delete-cell{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 50px;
+  color: rgb(253, 98, 98);
   padding: 4px;
+  transform: scale(1.4);
   cursor: pointer;
 }
-.table-container .table .tb .edit-cell{
+.table-container .table .edit-cell{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 50px;
+  color: #666;
+  padding: 4px;
+  transform: scale(1.4);
   cursor: pointer;
+}
+.table-container .table .edit-cell:hover, .table-container .table .delete-cell:hover {
+  padding: 5px
 }
 @media only screen and (min-width: 1024px) {
  .main {

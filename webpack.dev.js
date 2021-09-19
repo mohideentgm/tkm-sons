@@ -17,12 +17,17 @@ module.exports = merge(common, {
           use: ['babel-loader']
         },
         {
-            test: /\.css$/,
-            use: [
-                'style-loader', 
-                'css-loader', 
-                'postcss-loader'
-              ],
+          test: /\.(ts|tsx)?$/,
+          exclude: /node_modules/,
+          use: ['ts-loader']
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader', 
+            'css-loader', 
+            'postcss-loader'
+          ],
         },
         {
           test: /\.s[ac]ss$/i,

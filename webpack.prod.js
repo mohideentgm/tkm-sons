@@ -13,6 +13,11 @@ module.exports = merge(common, {
           use: ['babel-loader']
         },
         {
+          test: /\.(ts|tsx)?$/,
+          exclude: /node_modules/,
+          use: ['ts-loader']
+        },
+        {
           test: /\.css$/,
           use: [
             {
