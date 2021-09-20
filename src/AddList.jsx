@@ -83,7 +83,7 @@ function AddList({customers}) {
           <FormControl className="field">
             <InputLabel htmlFor="document-number">Document Number</InputLabel>
             <Input
-              type="text"
+              type="number"
               id="document-number"
               inputProps={{
                 minLength: 12,
