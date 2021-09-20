@@ -56,6 +56,10 @@
   margin: 0 5px 25px 5px;
   width: 95%;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
 .add-form form .button, .login-form .button {
   display: flex;
   justify-content: flex-end;
