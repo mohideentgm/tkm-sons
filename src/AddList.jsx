@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import CustomerList from './CustomerList'
 import { Db, auth } from './Fire'
 import { FormControl, Input, InputLabel, Button } from '@material-ui/core';
@@ -8,10 +8,25 @@ function AddList({customers}) {
   const [customerFatherName, setCustomerFatherName] = useState("")
   const [customerDocumentNumber, setCustomerDocumentNumber] = useState("")
   const [customerAddress, setCustomerAddress] = useState("")
-  // ADD CUSTOMER
-  const addData = (e) => {
-    e.preventDefault()
+  const [isDocNumExist, setIsDocNumExist] = useState(false)
 
+  useEffect(() => {
+    const timeOutId = setTimeout(() => {
+      if(customerDocumentNumber.length === 12) {
+        customers.find((item) => {
+          if(item.customerdocumentnumber === customerDocumentNumber) {
+            setIsDocNumExist(true)
+          }
+        })
+      }
+    }, 1000) 
+    return () => {
+      clearTimeout(timeOutId)
+      setIsDocNumExist(false)
+    }
+  }, [customerDocumentNumber])
+
+  const addToDatabase = () => {
     Db.collection("Customers")
       .doc(customerDocumentNumber)
       .set({
@@ -25,15 +40,26 @@ function AddList({customers}) {
          setCustomerDocumentNumber("")
          setCustomerAddress("")
       })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+    if(isDocNumExist) {
+      const confirmation = confirm("This document number already exist. do you want to replace the customer")
+      confirmation === true ? addToDatabase() : setCustomerDocumentNumber("")
+    } else {
+      addToDatabase()
+    }
   };
-  // RESET FORM 
+
   const resetForm = () => {
     setCustomerName("")
     setCustomerFatherName("")
     setCustomerDocumentNumber("")
     setCustomerAddress("")
   }
-  // EDIT CELL 
+
   const editCell = (data) => {
     const confirmation = confirm("Are you sure you want to edit this record")
     if(confirmation) {
@@ -44,7 +70,7 @@ function AddList({customers}) {
       window.scrollTo(0, 0)
     }
   }
-  // DISPLAY
+
   return (
     <div>
       <div className="header">
@@ -55,7 +81,7 @@ function AddList({customers}) {
       </div>
       <div className="add-form">
         <h4 className="sub-heading">Add New Customer</h4>
-        <form autoComplete="off" onSubmit={(e) => addData(e)}>
+        <form autoComplete="off" onSubmit={(e) => handleSubmit(e)}>
           <FormControl className="field">
             <InputLabel htmlFor="name">Customer Name</InputLabel>
             <Input
