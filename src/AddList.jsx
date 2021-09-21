@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import CustomerList from './CustomerList'
 import { Db, auth } from './Fire'
 import { FormControl, Input, InputLabel, Button } from '@material-ui/core';
@@ -8,7 +8,7 @@ function AddList({customers}) {
   const [customerFatherName, setCustomerFatherName] = useState("")
   const [customerDocumentNumber, setCustomerDocumentNumber] = useState("")
   const [customerAddress, setCustomerAddress] = useState("")
-  // ADD CUSTOMER
+
   const addData = (e) => {
     e.preventDefault()
 
@@ -26,14 +26,14 @@ function AddList({customers}) {
          setCustomerAddress("")
       })
   };
-  // RESET FORM 
+
   const resetForm = () => {
     setCustomerName("")
     setCustomerFatherName("")
     setCustomerDocumentNumber("")
     setCustomerAddress("")
   }
-  // EDIT CELL 
+
   const editCell = (data) => {
     const confirmation = confirm("Are you sure you want to edit this record")
     if(confirmation) {
@@ -44,7 +44,7 @@ function AddList({customers}) {
       window.scrollTo(0, 0)
     }
   }
-  // DISPLAY
+
   return (
     <div>
       <div className="header">
