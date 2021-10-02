@@ -27,7 +27,11 @@ function App() {
         setPassword("")
         setEmail("")
       }
-      )
+      ).then(() => {
+        setTimeout(() => {
+          manageUser(JSON.parse(localStorage.getItem('authUser')))
+        }, 2000)
+      })
       .catch((err) => {
         switch (err.code) {
           case "auth/invalid-email":
@@ -45,12 +49,12 @@ function App() {
   const authListener = () => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        setUser(user)
+        localStorage.setItem('authUser', JSON.stringify(user))
         setEmailError("")
         setPasswordError("")
       }
       else {
-        setUser("")
+        localStorage.removeItem('authUser')
       }
     })
   }
@@ -59,11 +63,19 @@ function App() {
     authListener()
   }, [])
 
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem('authUser')))
+  }, [])
+
+  function manageUser(user) {
+    setUser(user)
+  }
+
   return (
     <main className="main">
       <>
         {user ?
-          <AddList customers={customers} /> :
+          <AddList customers={customers} setUser={manageUser} /> :
           <Login
             email={email}
             setEmail={setEmail}
