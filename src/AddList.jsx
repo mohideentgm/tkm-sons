@@ -3,7 +3,7 @@ import CustomerList from './CustomerList'
 import { Db, auth } from './Fire'
 import { FormControl, Input, InputLabel, Button } from '@material-ui/core';
 
-function AddList({customers}) {
+function AddList({customers, setUser}) {
   const [customerName, setCustomerName] = useState("")
   const [customerFatherName, setCustomerFatherName] = useState("")
   const [customerDocumentNumber, setCustomerDocumentNumber] = useState("")
@@ -71,10 +71,15 @@ function AddList({customers}) {
     }
   }
 
+  const signOut = () => {
+    auth.signOut()
+    setUser("")
+  }
+
   return (
     <div>
       <div className="header">
-        <Button onClick={() => {auth.signOut()}} className="logout-btn" size="small" color="secondary">
+        <Button onClick={() => {signOut()}} className="logout-btn" size="small" color="secondary">
           Logout
         </Button>
         <h3 className="main-heading">TKM SONS</h3>

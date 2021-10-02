@@ -1,7 +1,15 @@
 import React from 'react'
 import { FormControl, Input, InputLabel, Button } from '@material-ui/core';
 
-const Login = ({email, setEmail, emailError, password, setPassword, passwordError, handleLogin}) => {
+const Login = ({
+  email, 
+  setEmail, 
+  emailError, 
+  password, 
+  setPassword, 
+  passwordError, 
+  handleLogin,
+}) => {
 
   return (
     <div className="login-container">
@@ -29,7 +37,13 @@ const Login = ({email, setEmail, emailError, password, setPassword, passwordErro
           </FormControl>
           <p className="login-err">{passwordError}</p>
           <FormControl className="field button">
-            <Button type="submit" variant="contained" color="primary">Login</Button>
+            <Button 
+              type="submit" 
+              variant="contained" 
+              color="primary"
+            >
+              Login
+            </Button>
           </FormControl>
        </form>
     </div>
