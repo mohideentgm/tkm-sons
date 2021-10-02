@@ -80,7 +80,7 @@ function AddList({customers, setUser}) {
     <div>
       <div className="header">
         <Button onClick={() => {signOut()}} className="logout-btn" size="small" color="secondary">
-          Logout
+          Signout
         </Button>
         <h3 className="main-heading">TKM SONS</h3>
       </div>
@@ -98,7 +98,6 @@ function AddList({customers, setUser}) {
               }
               value={customerName}
               required
-              autoFocus
             />
           </FormControl>
           <FormControl className="field">

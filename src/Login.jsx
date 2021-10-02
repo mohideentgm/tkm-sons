@@ -14,7 +14,7 @@ const Login = ({
   return (
     <div className="login-container">
      <form className="login-form" onSubmit={(e) => {handleLogin(e)}}>
-      <h4 className="main-heading">Login</h4>
+      <h4 className="main-heading">Signin</h4>
       <FormControl className="field">
             <InputLabel htmlFor="emai">Enter Your Email</InputLabel>
             <Input
@@ -42,7 +42,7 @@ const Login = ({
               variant="contained" 
               color="primary"
             >
-              Login
+              Signin
             </Button>
           </FormControl>
        </form>

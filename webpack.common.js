@@ -35,6 +35,7 @@ module.exports = {
   plugins: [
       new HtmlWebpackPlugin({
           template: 'public/index.html',
+          favicon: 'public/tkmlogo.png',
       }),
       new webpack.DefinePlugin({
         'process.env': JSON.stringify(dotenv.config().parsed)
